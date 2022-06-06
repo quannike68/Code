@@ -60,7 +60,7 @@ body {
 .navigation ul li a .icon {
     position: relative;
     display: block;
-    line-height: 75px;
+    line-height: 85px;
     font-size: 1.5em;
     color: var(--clr);
     transition: 0.5s;
@@ -74,8 +74,8 @@ body {
     position: absolute;
     color: var(--clr);
     font-weight: 400;
-    font-size: 0.75em;
-    letter-spacing: 0.05em;
+    font-size: 0.8em;
+    letter-spacing: 0.08em;
     transition: 0.5s;
     opacity: 0;
     transform: translateY(20px);
@@ -101,9 +101,42 @@ body {
     content: '';
     position: absolute;
     top: 45%;
-    left: -35%;
+    left: -36%;
     width: 20px;
     height: 20px;
-    background-color: red;
+    background-color: rgb(255, 255, 255);
     border-top-right-radius: 20px;
+    box-shadow: 0 -10px 0 0 var(--clr);
+}
+
+.indicator::after {
+    content: '';
+    position: absolute;
+    top: 45%;
+    right: -22px;
+    width: 20px;
+    height: 20px;
+    /* background-color: aqua; */
+    border-top-left-radius: 25px;
+    box-shadow: 0 -10px 0 0 var(--clr);
+}
+
+.navigation ul li:nth-child(1).active~.indicator {
+    transform: translateX(calc(70px * 0));
+}
+
+.navigation ul li:nth-child(2).active~.indicator {
+    transform: translateX(calc(70px * 1));
+}
+
+.navigation ul li:nth-child(3).active~.indicator {
+    transform: translateX(calc(70px * 2));
+}
+
+.navigation ul li:nth-child(4).active~.indicator {
+    transform: translateX(calc(70px * 3));
+}
+
+.navigation ul li:nth-child(5).active~.indicator {
+    transform: translateX(calc(70px * 4));
 }
